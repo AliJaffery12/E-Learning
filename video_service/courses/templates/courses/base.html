@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="xza1QdBI"></script>
+       
+    </head>
+    <body>
+   
+
+       {% load static %}
+       <link rel="stylesheet" href="{% static 'css/image.css' %}" type = "text/css"/>
+       <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+      
+
+     {% include 'courses/messages.html' %}
+	<div class="container">
+            <nav>
+        <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="{% static 'js/Intelligent E-Learning.png' %} width=100 height=100 "/></a>
+        
+        <ul id="nav-pc" class="right hide-on-med-and-down">
+        
+            <li><a href='#'><b>Home</a></b></li>
+           
+             {% block post_detail_link %}
+	         {% endblock %}
+             {% if user.is_authenticated %}
+               {% if user.is_teacher %}
+             <li class="pull-right"><a href="{% url 'courses:course_create' %}"><b>CreateCourse</b></a></li>
+             <li class="pull-right"><a href="{% url 'quiz:create_quiz' %}"><b>AddQuiz</b></a></li>
+             {%else%}
+              <li class="pull-right"><a href="{% url 'courses:course_list' %}"><b>Courses</b></a></li>
+             {% endif%}
+             {% endif%}
+
+             {% if not request.user.is_authenticated %}
+
+	            <li class='pull-right'><a href="{% url 'accounts:signup' %}"><b>Register</a></b></li>
+	            <li class='pull-right'><a href="{% url 'accounts:login' %}"><b>Login</a></b></li>
+	        {% else %}
+	        <li class='pull-right'><a href="/memberships"><b>Memberships</a></b></li>
+            <li class='pull-right'><a href="{% url 'accounts:logout' %}"><b>Log Out</a></b></li>
+            <li><a href="{% url 'memberships:profile' %}"><b>Profile</a></b></li>
+            
+            
+	        {% endif %}
+        
+        </ul>
+        
+        </div>
+        
+    </nav>
+    <!-- This is Search Bar code I will redesign it Later accoding to the need now kam chalaoo-->
+    
+   <br>
+    {% block content %}
+	{% endblock content %} 
+ 
+
+
+        
+         
+		
+	
+    
+  
+
+<!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+ 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="" async defer></script>
+        
+    
+<!--<canvas id="canvas"></canvas>-->
+
+
+    </body>
+    <!--<td class="tdStyle"> 
+    <body id="bg" style="background-image: url('{% static "js/back.jpg"%}')";>
+    </td>-->
+    <!--<script type="text/javascript" src="{% static 'js/master.js' %}">-->
+    
+    
+    </script>
+    
+    <script>M.AutoInit();</script>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- About -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_about">
+						<div class="logo_container">
+							<a href="#">
+								<div class="logo_content d-flex flex-row align-items-end justify-content-start">
+									<div class="logo_img"><img src="{% static 'images/logo.png'%}" alt=""></div>
+									<div class="logo_text">learn</div>
+								</div>
+							</a>
+						</div>
+						<div class="footer_about_text">
+							<p style="color:white; font-weight:bold;">Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar.</p>
+						</div>
+						<div class="footer_social">
+							<ul>
+								<li style="color:white; font-weight:bold;"><a href="#" ><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="copyright" style="color:white; font-weight:bold;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col" style="color:white; font-weight:bold;">
+					<div class="footer_links" style="color:white; font-weight:bold;">
+						<div class="footer_title" style="color:white; font-weight:bold;">Quick menu</div>
+						<ul class="footer_list" style="color:white; font-weight:bold;">
+							<li style="color:white; font-weight:bold;"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="#">Facts</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col" style="color:white; font-weight:bold;">
+					<div class="footer_links" style="color:white; font-weight:bold;">
+						<div class="footer_title">Useful Links</div>
+						<ul class="footer_list">
+							<li><a href="courses.html">Courses</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="#">Teachers</a></li>
+							<li><a href="#">Links</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col" style="color:white; font-weight:bold;">
+					<div class="footer_contact" style="color:white; font-weight:bold;">
+						<div class="footer_title" style="color:white; font-weight:bold;">Contact Us</div>
+						<div class="footer_contact_info" style="color:white; font-weight:bold;">
+							<div class="footer_contact_item" style="color:white; font-weight:bold;">
+								<div class="footer_contact_title" style="color:white; font-weight:bold;">Address:</div>
+								<div class="footer_contact_line" style="color:white; font-weight:bold;">1481 Creekside Lane Avila Beach, CA 93424</div>
+							</div>
+							<div class="footer_contact_item" style="color:white; font-weight:bold;">
+								<div class="footer_contact_title" style="color:white; font-weight:bold;">Phone:</div>
+								<div class="footer_contact_line" style="color:white; font-weight:bold;">+53 345 7953 32453</div>
+							</div>
+							<div class="footer_contact_item" style="color:white; font-weight:bold;">
+								<div class="footer_contact_title" style="color:white; font-weight:bold;">Email:</div>
+								<div class="footer_contact_line" style="color:white; font-weight:bold;">yourmail@gmail.com</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+</body>
+</html>

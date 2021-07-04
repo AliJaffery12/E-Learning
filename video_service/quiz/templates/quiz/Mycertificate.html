@@ -1,0 +1,36 @@
+
+{% load static %}
+<html>
+{% block main_content %}
+<head>
+<title>CERTIFICATE</title>
+</head>
+<body>
+{% load static %}
+
+<div align="center"><TABLE width=800 align="center">
+<TABLE borderColor=black border=3>
+<TBODY>
+<TR><TD width="100%" bgColor=#933993 +90>
+<br>
+<CENTER><B style="color:#111111;font-size:20px;font-weight:bold;">Intelligent E-Learning Success CERTIFICATE </B></CENTER>
+<CENTER><STRONG>
+<H1><FONT size=6>CERTIFICATE OF Completeion Course</H1></FONT></STRONG></CENTER>
+<CENTER></CENTER><BR><img SRC="http://www.jamaicaobserver.com/assets/12810163/194223_.jpg"  hspace=50 vspace=3 align=left><BR><CENTER>
+    <strong style="font-size:30pt;">{{user}}</strong>
+<H3><STRONG><FONT size=4>has satisfactorily completed</H3></CENTER></FONT>
+    <CENTER><h1>{{ course }} </h1>
+    
+    <strong style="font-size:30pt;">{{user}}</strong>
+    <img source="static/js/Intelligent E-learning.png" height="200px"></img>
+<H3><STRONG><FONT size=4>awarded by the</H3></CENTER></FONT>
+<CENTER>
+<H3><STRONG><FONT size=6>jafferytechnologies</H3></STRONG></CENTER></FONT>
+<CENTER>
+<H3><STRONG><FONT size=4>University Of Gujrat punjab,Pakistan </H3></STRONG></CENTER>
+<CENTER>
+<H3><STRONG><FONT size=2><VAR>Accredited by <h3 style="color:#111111;font-size:20px;font-weight:bold;">UOG</h3></VAR></H3></STRONG></CENTER></FONT><BR>
+<img src="{% static 'js/Intelligent E-Learning.png' %} width=100 height=100 "/>
+</TD></TR></TBODY></TABLE></TABLE></div></body>
+{%  endblock %}
+</html>

@@ -1,0 +1,129 @@
+
+{% extends 'courses/base2.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<html lang="en">
+
+<head>
+
+
+    {% load static %}
+
+    
+
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <!--<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+        <div class="top_container">
+            
+            <p class="site_description">Take a quiz !</p>
+            <<a class="create_quiz" href="{% url 'quiz:create_quiz' %}">CREATE QUIZ</a>
+        </div>
+
+        {% if all_quiz_list %}
+
+            <section class="card_container">
+
+                    {% for quiz in all_quiz_list %}
+                        
+                        <a class="card" href="{% url 'quiz:single_quiz' quiz.id %}">
+                            <h3 class="quiz_title">{{ quiz.quiz_title }}</h3>
+                            <h6 class="num_questions">{{ quiz.num_questions }} Questions</h6>
+                        </a>
+
+                    {% endfor %}
+            </section>
+
+
+
+        {% else %}
+            <p>No quizzes are available.</p>
+        {% endif %}
+
+        <br>
+        <br>
+        <br>
+
+    </div>-->
+    <br>
+    <br>
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+        <!--<div class="top_container">
+            
+           <p class="site_description">Take a quiz !</p>
+            <a class="create_quiz" href="{% url 'quiz:create_quiz' %}">CREATE QUIZ</a>
+        </div>-->
+{% block content %}
+<div class="col-lg-3 mx-auto">
+			<div class="list-group">
+
+				<a href="/quiz/" class="list-group-item list-group-item-action">All Quiz</a>
+
+				{% for subject in subjects %}
+				<a href="/quiz/?subject={{subject.id}}"
+					class="list-group-item list-group-item-action">{{subject.name}}</a>
+				{% endfor %}
+			</div>
+		</div>
+    
+        {% if all_quiz_list %}
+
+            <section class="card_container">
+
+                    {% for quiz in all_quiz_list %}
+                        
+                        <a class="card" href="{% url 'quiz:single_quiz' quiz.id %}">
+                            <h3 class="quiz_title">{{ quiz.quiz_title }}</h3>
+                            <h6 class="num_questions">{{ quiz.num_questions }} Questions</h6>
+                            
+                        </a>
+
+                    {% endfor %}
+            </section>
+
+
+
+        {% else %}
+            <p>No quizzes are available.</p>
+        {% endif %}
+
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+
+</body>
+{% endblock %}
+</html>

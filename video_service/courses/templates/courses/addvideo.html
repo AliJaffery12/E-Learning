@@ -1,0 +1,21 @@
+{% extends 'courses/base2.html' %}
+{% load bootstrap3 %}
+{% block content %}
+<h1 style="color:white;text-align:center;">Add a Lesson Video related to Sub-Section of the course</h1>
+<div class="container" style="display:flex;justify-content:center;align-items:center;">
+
+    <form method="post" enctype = "multipart/form-data">
+    <!--class="was-validated"  enctype = "multipart/form-data"-->
+        <div class="form-group">
+
+        {% csrf_token %}
+        <p style="text-align:center;font-size:100%;">{{form.as_p}}</p>
+        <br>
+
+        <a href="{% url 'courses:course_list' %}"><input type="submit" value="submit" style="background-color:white;margin:auto;display:block;font-weight:bold"></a>
+        </div>
+
+
+    </form>
+</div>
+{% endblock %}

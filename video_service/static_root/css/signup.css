@@ -1,0 +1,38 @@
+#btn {
+    text-align: center;
+    text-emphasis: none;
+    text-shadow: lightgrey;
+    text-justify: auto;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.card-title {
+    align-items: center;
+    text-align: center;
+    text-emphasis: none;
+}
+
+#textsign {
+    text-align: center;
+    font-size: 50px;
+    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: normal;
+    font-variant-caps: all-petite-caps;
+}
+
+#label {
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#row {
+    align-items: center;
+}
+
+#all {
+    align-content: center;
+    align-items: center;
+}

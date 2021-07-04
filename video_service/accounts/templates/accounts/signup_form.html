@@ -1,0 +1,59 @@
+{% extends 'courses/base2.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container" style="display:flex;justify-content:center;align-items:center;">
+  <div class="row" style="color:white;font-style:bold">
+    <div class="col-md-8 col-sm-10 col-12" style="color:white;font-style:bold">
+      <h2 style="color:white;font-style:bold">Sign up as a {{ user_type }}</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <!--{{ form|crispy }}-->  
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <!--<div id="all">
+<div class="container">
+    
+       {% load static %}
+       <link rel="stylesheet" href="{% static 'css/signup.css' %}" type = "text/css"/>
+    
+       
+    
+    <div class="row">
+        <h2>Sign up as a {{ user_type }}</h2>
+       
+        <form method="post">
+        {% csrf_token %}
+
+        <div class="col s8 m10 14 l" >
+             <div id="textsign">Sign Up</div>
+
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title"> <img src="https://img.icons8.com/material/96/000000/edit-user-male--v1.png"/></span>
+                    <div id="label">
+                    <label>Username:</label></br><p style="font-size:70%">{{form.username}}</p>
+                    <label>Email:</label></br><p>{{form.email}}</p>
+                    <label>Password:</label></br><p>{{form.password1}}</p>
+                    <label>Conform Password:</label></br><p>{{form.password2}}</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div id="btn">
+                    <input type="submit" class="btn btn-default" value="Sign Up" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    
+</div>
+</div>!-->
+{% endblock %}

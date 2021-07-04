@@ -1,0 +1,16 @@
+{% extends 'courses/base.html' %}
+{% block content%}
+{% for object in object_list %}
+    <div class="container">
+    <tr>
+        <td><a href="">{{ object.name }}</a></td>
+        <p><a href='#'><img src="{{ object.thumbnail }}" width='300' height='200' /></a></p>
+        <p>{{object.description}}</a>
+        
+        
+        
+    </tr>
+    </div>
+{% endfor %}
+
+{% endblock %}

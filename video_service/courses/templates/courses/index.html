@@ -1,0 +1,516 @@
+{% extends 'courses/base2.html' %}
+{% load static  %}
+
+	<!-- Home -->
+{% block content %}
+	<div class="home">
+		<div class="home_slider_container">
+			
+			<!-- Home Slider -->
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slider Item -->
+				<div class="owl-item">
+					<!-- Background image artist https://unsplash.com/@benwhitephotography -->
+					<div class="home_slider_background" style="background-image:url({% static 'images/sliderone.png'%}); background-size: 100% 100%;"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content text-center">
+										<!--<div class="home_logo"><img src="{% static 'images/iElearn.png'%}" alt="" width="110" height="100"></div>-->
+										<div class="home_text">
+											<div class="home_title"></div>
+											<div class="home_subtitle"></div>
+										</div>
+										<!--<div class="home_buttons">
+											<div class="button home_button"><a href="#">learn more<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+											<div class="button home_button"><a href="#">see all courses<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+										</div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slider Item -->
+				<div class="owl-item">
+					<!-- Background image artist https://unsplash.com/@benwhitephotography -->
+					<div class="home_slider_background" style="background-image:url({% static 'images/slidertwo.png'%}); background-size: 100% 100%;"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content text-center">
+										<!--<div class="home_logo"><img src="{% static 'images/iElearn.png'%}" alt=""></div>-->
+										<div class="home_text">
+											<div class="home_title"></div>
+											<div class="home_subtitle"></div>
+										</div>
+										<!--<div class="home_buttons">
+											<div class="button home_button"><a href="#">learn more<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+											<div class="button home_button"><a href="#">see all courses<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+										</div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slider Item -->
+				<div class="owl-item">
+					<!-- Background image artist https://unsplash.com/@benwhitephotography -->
+					<div class="home_slider_background" style="background-image:url({% static 'images/sliderthree.png'%});background-size: 100% 100%;"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content text-center" >
+										<!--<div class="home_logo"><img src="{% static 'images/home_logo.png'%}" alt="" ></div>-->
+										<div class="home_text">
+											<div class="home_title"></div>
+											<div class="home_subtitle"></div>
+										</div>
+										<!--<div class="home_buttons">
+											<div class="button home_button"><a href="#">learn more<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+											<div class="button home_button"><a href="#">see all courses<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+										</div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Featured Course -->
+
+	<!--<div class="featured">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					 Home Slider Nav 
+					<div class="home_slider_nav_container d-flex flex-row align-items-start justify-content-between">
+						<div class="home_slider_nav home_slider_prev trans_200"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+						<div class="home_slider_nav home_slider_next trans_200"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+					</div>
+					<div class="featured_container">
+						<div class="row">
+							<div class="col-lg-6 featured_col">
+								<div class="featured_content">
+									<div class="featured_header d-flex flex-row align-items-center justify-content-start">
+										<div class="featured_tag"><a href="#">Featured</a></div>
+										<div class="featured_price ml-auto">Price: <span>$35</span></div>
+									</div>
+									<div class="featured_title"><h3><a href="courses.html">Online Literature Course</a></h3></div>
+									<div class="featured_text">Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar. Donec vehicula efficitur nibh, in pretium nulla interdum non.</div>
+									<div class="featured_footer d-flex align-items-center justify-content-start">
+										<div class="featured_author_image"><img src="{%static 'images/featured_author.jpg'%}" alt=""></div>
+										<div class="featured_author_name">By <a href="#">James S. Morrison</a></div>
+										<div class="featured_sales ml-auto"><span>352</span> Sales</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 featured_col">
+								 Background image artist https://unsplash.com/@jtylernix 
+								<div class="featured_background" style="background-image:url({% static 'images/featured.jpg'%});"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<!-- Courses -->
+
+	<div class="courses">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="section_title text-center" style="color:black;font-weight:bold;"><h2>Choose your course</h2></div>
+					<div class="section_subtitle" style="color:black;font-weight:bold;">The beautiful thing about learning is nobody can take it away from you.Online learning is rapidly becoming one of the most cost-effective ways to educate the world’s rapidly expanding workforce.</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="course_search">
+						<form method="get"  action='search/' class="course_search_form d-flex flex-md-row flex-column align-items-start justify-content-between">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div><input type="text" class="course_input" placeholder="Course" required="required" name="query" id="query" style="font-size:180%;color:black;"></div>
+							<!--<div><input type="text" class="course_input" placeholder="Level" required="required"></div>-->
+							<button class="course_button"><span>search course</span><span class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					
+					<!-- Courses Slider -->
+					<div class="courses_slider_container">
+						<div class="owl-carousel owl-theme courses_slider">
+							
+							<!-- Slider Item -->
+							<div class="owl-item">
+								<div class="course">
+									<div class="course_image"><img src="{% static 'images/Ali.jpg' %}" width="300" height="550" alt=""></div>
+									<div class="course_body">
+										<div class="course_header d-flex flex-row align-items-center justify-content-start">
+											<div class="course_tag"><a href="#">MembershipReq</a></div>
+											<div class="course_price ml-auto">MembershipReq: <span>$Pro</span></div>
+										</div>
+										<div class="course_title"><h3><a href="courses.html">Pyhton DataScience course</a></h3></div>
+										<div class="course_text">Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.</div>
+										<div class="course_footer d-flex align-items-center justify-content-start">
+											<div class="course_author_image"><img src="{% static 'images/Ali.jpg'%}" alt="https://unsplash.com/@anthonytran"></div>
+											<div class="course_author_name">By <a href="#">Ali Jaffery</a></div>
+											<div class="course_sales ml-auto"><span>352</span> Sales</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slider Item -->
+							<div class="owl-item">
+								<div class="course">
+									<div class="course_image"><img src="{% static 'images/Adil.jpeg'%}"  alt=""></div>
+									<div class="course_body">
+										<div class="course_header d-flex flex-row align-items-center justify-content-start">
+											<div class="course_tag"><a href="#">MembershipReq</a></div>
+											<div class="course_price ml-auto"><span>$Enterprise</span></div>
+										</div>
+										<div class="course_title"><h3><a href="courses.html">UI/UX Course</a></h3></div>
+										<div class="course_text">Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.</div>
+										<div class="course_footer d-flex align-items-center justify-content-start">
+											<div class="course_author_image"><img src="{% static 'images/Adil.jpeg'%}" alt=""></div>
+											<div class="course_author_name">By <a href="#">Adil Liaqat</a></div>
+											<div class="course_sales ml-auto"><span>352</span> Sales</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slider Item -->
+							<div class="owl-item">
+								<div class="course">
+									<div class="course_image"><img src="{% static 'images/Baqir.jpeg'%}" alt="https://unsplash.com/@annademy"></div>
+									<div class="course_body">
+										<div class="course_header d-flex flex-row align-items-center justify-content-start">
+											<div class="course_tag"><a href="#">Free</a></div>
+											<div class="course_price ml-auto">Price: <span>$0</span></div>
+										</div>
+										<div class="course_title"><h3><a href="courses.html">UML Diagrams Course</a></h3></div>
+										<div class="course_text">Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.</div>
+										<div class="course_footer d-flex align-items-center justify-content-start">
+											<div class="course_author_image"><img src="{% static 'images/Baqir.jpeg'%}" alt=""></div>
+											<div class="course_author_name">By <a href="#">Baqir Hussain</a></div>
+											<div class="course_sales ml-auto"><span>352</span> Sales</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						
+						<!-- Courses Slider Nav -->
+						<div class="courses_slider_nav courses_slider_prev trans_200"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+						<div class="courses_slider_nav courses_slider_next trans_200"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<!-- Background image artis https://unsplash.com/@thepootphotographer -->
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/milestones.jpg'%}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row milestones_container">
+							
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_1.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="1548">0</div>
+						<div class="milestone_text">Online Courses</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_2.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="7286">0</div>
+						<div class="milestone_text">Students</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_3.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="257">0</div>
+						<div class="milestone_text">Teachers</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_4.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="39">0</div>
+						<div class="milestone_text">Countries</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Sections -->
+
+	<div class="grouped_sections">
+		<div class="container">
+			<div class="row">
+
+				<!-- Why Choose Us -->
+
+				<div class="col-lg-4 grouped_col">
+					<div class="grouped_title">Why Choose Us?</div>
+					<div class="accordions">
+
+						<div class="accordion_container">
+							<div class="accordion d-flex flex-row align-items-center active"><div>More About Intelligent E-Learning?</div></div>
+							<div class="accordion_panel">
+								<div>
+									<p>Intelligent E-Learning is an online platform for Students to continue their Learning at therir home.Here you can find all kinds of courses and Can sharp your skills at their door step.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_container">
+							<div class="accordion d-flex flex-row align-items-center"><div>Developers Behind Intelligent Tech?</div></div>
+							<div class="accordion_panel">
+								<div>
+									<p>Intelligent E-Learning is an online platform for Students to continue their Learning at therir home.Here you can find all kinds of courses and Can sharp your skills at their door step..</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_container">
+							<div class="accordion d-flex flex-row align-items-center"><div>Educational Larget chain for Students?</div></div>
+							<div class="accordion_panel">
+								<div>
+									<p>Intelligent E-Learning is an online platform for Students to continue their Learning at therir home.Here you can find all kinds of courses and Can sharp your skills at their door step..</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion_container">
+							<div class="accordion d-flex flex-row align-items-center"><div>Planing for Online Education?</div></div>
+							<div class="accordion_panel">
+								<div>
+									<p>Intelligent E-Learning is an online platform for Students to continue their Learning at therir home.Here you can find all kinds of courses and Can sharp your skills at their door step...</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Events -->
+
+				<div class="col-lg-4 grouped_col">
+					<div class="grouped_title">Upcoming Events</div>
+					<div class="events">
+
+						<!-- Event -->
+						<div class="event d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">20</div>
+									<div class="event_month">June</div>
+								</div>
+							</div>
+							<div class="event_body">
+								<div class="event_title"><a href="#">New Marketing Course Release</a></div>
+								<div class="event_subtitle">Location: UOG Hafiz Hayat campus</div>
+							</div>
+						</div>
+
+						<!-- Event -->
+						<div class="event d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">23</div>
+									<div class="event_month">June</div>
+								</div>
+							</div>
+							<div class="event_body">
+								<div class="event_title"><a href="#">Students Art Workshop</a></div>
+								<div class="event_subtitle">Location: Online Platform</div>
+							</div>
+						</div>
+
+						<!-- Event -->
+						<div class="event d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">25</div>
+									<div class="event_month">June</div>
+								</div>
+							</div>
+							<div class="event_body">
+								<div class="event_title"><a href="#">Launch Party for a new Platform</a></div>
+								<div class="event_subtitle">Location: Online Platform</div>
+							</div>
+						</div>
+
+						<!-- Event -->
+						<div class="event d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">27</div>
+									<div class="event_month">June</div>
+								</div>
+							</div>
+							<div class="event_body">
+								<div class="event_title"><a href="#">New Marketing Course</a></div>
+								<div class="event_subtitle">Location: Online Platform</div>
+							</div>
+						</div>
+
+						<!-- Event -->
+						<div class="event d-flex flex-row align-items-start justify-content-start">
+							<div>
+								<div class="event_date d-flex flex-column align-items-center justify-content-center">
+									<div class="event_day">29</div>
+									<div class="event_month">June</div>
+								</div>
+							</div>
+							<div class="event_body">
+								<div class="event_title"><a href="#">New Marketing Course</a></div>
+								<div class="event_subtitle">Location: Online Platform</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- News -->
+
+				<div class="col-lg-4 grouped_col">
+					<div class="grouped_title">Latest News</div>
+					<div class="news">
+						
+						<!-- News Post -->
+						<div class="news_post d-flex flex-row align-items-start justify-content-start">
+							<div><div class="news_post_image"><img src="{% static 'images/news_1.jpg'%}" alt="https://unsplash.com/@beccatapert"></div></div>
+							<div class="news_post_body">
+								<div class="news_post_date">June 22, 2021</div>
+								<div class="news_post_title"><a href="news.html">Why Choose online education?</a></div>
+								<div class="news_post_author">By <a href="#">William Smith</a></div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-row align-items-start justify-content-start">
+							<div><div class="news_post_image"><img src="{% static 'images/news_2.jpg'%}" alt="https://unsplash.com/@nbb_photos"></div></div>
+							<div class="news_post_body">
+								<div class="news_post_date">April 02, 2018</div>
+								<div class="news_post_title"><a href="news.html">Books, Kindle or tablet?</a></div>
+								<div class="news_post_author">By <a href="#">William Smith</a></div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-row align-items-start justify-content-start">
+							<div><div class="news_post_image"><img src="{% static 'images/news_3.jpg'%}" alt="https://unsplash.com/@rawpixel"></div></div>
+							<div class="news_post_body">
+								<div class="news_post_date">April 02, 2018</div>
+								<div class="news_post_title"><a href="news.html">Why Choose online education?</a></div>
+								<div class="news_post_author">By <a href="#">William Smith</a></div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-row align-items-start justify-content-start">
+							<div><div class="news_post_image"><img src="{% static 'images/news_4.jpg'%}" alt="https://unsplash.com/@jtylernix"></div></div>
+							<div class="news_post_body">
+								<div class="news_post_date">April 02, 2018</div>
+								<div class="news_post_title"><a href="news.html">Books, Kindle or tablet?</a></div>
+								<div class="news_post_author">By <a href="#">William Smith</a></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Video -->
+
+	<!--<div class="video">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="video_container_outer">
+						<div class="video_container">
+							 Video poster image artist: https://unsplash.com/@annademy 
+							<video id="vid1" class="video-js vjs-default-skin" controls data-setup='{ "poster": "{% static 'images/video.jpg'%}", "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://youtu.be/5_MRXyYjHDk"}], "youtube": { "iv_load_policy": 1 } }'>
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<!-- Join -->
+
+	<div class="join">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="section_title text-center" ><h2 style="font-weight:bold;font-color:black;">Join Our Platform Today</h2></div>
+					<div class="section_subtitle">Intelligent E-Learning is an online platform for Students to continue their Learning at therir home.Here you can find all kinds of courses and Can sharp your skills at their door step</div>
+				</div>
+			</div>
+		</div>
+		<div class="button join_button"><a href="#">register now<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+	</div>
+	<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<script type="text/javascript">
+    window.__be = window.__be || {};
+    window.__be.id = "60c256a61f82ea00074b6789";
+    (function() {
+        var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+        be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+    })();
+</script>
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+<!-- End of ChatBot code -->
+
+{% endblock %}

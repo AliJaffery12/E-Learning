@@ -1,0 +1,11 @@
+{% extends 'courses/base2.html' %}
+
+
+{% block content %}
+  <div class="container" >
+  <h2 style="color:white;font-style:bold">Sign up for a free account</h2>
+  <p class="lead" style="color:white;font-style:bold">Select below the type of account you want to create</p>
+  <a href="{% url 'accounts:student_signup' %}" class="btn btn-student btn-lg" role="button">I'm a student</a>
+  <a href="{% url 'accounts:teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">I'm a teacher</a>
+  </div>
+{% endblock %}

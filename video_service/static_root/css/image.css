@@ -1,0 +1,9 @@
+#bg {
+    background-size: 40%;
+    width: 20%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: right;
+    display: inline;
+}

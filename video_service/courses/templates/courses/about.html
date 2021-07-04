@@ -1,0 +1,336 @@
+
+{% extends 'courses/base2.html' %}
+{% load static %}
+
+
+<div class="super_container">
+
+	<!-- Header -->
+
+
+	<!-- About -->
+
+{% block content %}
+	<div class="home">
+		<!-- Background image artist https://unsplash.com/@thepootphotographer -->
+		<div class="home_background parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/about.jpg'%}" data-speed="0.8"></div>
+			<div class="home_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_content text-center">
+								<div class="home_title">About us</div>
+									<div class="breadcrumbs">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li>About us</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	<div class="about">
+		<div class="container">
+		<br>
+			<div class="row about_row row-lg-eq-height">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="about_title">Our Platform's main goal</div>
+						<div class="about_text">
+							<p>Intelligent E-Learning Work From Home is a biggest E-Learning PlatForm.Learning experiences are like journeys. The journey starts where the learning is now, and ends when the learner is successful. The end of the journey isn't knowing more, it's doing more." —Julie Dirksen, Learning Strategy and Design Consultant</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image"><img src="{% static 'images/about_1.jpg'%}" alt="https://unsplash.com/@jtylernix"></div>
+				</div>
+			</div>
+			<div class="row about_row row-lg-eq-height">
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="about_image"><img src="{% static 'images/about_1.jpg'%}" alt=""></div>
+				</div>
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="about_content">
+						<div class="about_title">Inteligent E-Learning Vision</div>
+						<div class="about_text">
+							<p>Learning experiences are like journeys. The journey starts where the learning is now, and ends when the learner is successful. The end of the journey isn't knowing more, it's doing more." —Julie Dirksen, Learning Strategy and Design Consultant.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<!-- Background image artis https://unsplash.com/@thepootphotographer -->
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/milestones.jpg'%}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row milestones_container">
+							
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_1.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="1548">0</div>
+						<div class="milestone_text">Online Courses</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_2.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="7286">0</div>
+						<div class="milestone_text">Students</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_3.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="257">0</div>
+						<div class="milestone_text">Teachers</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'images/milestone_4.svg'%}" alt=""></div>
+						<div class="milestone_counter" data-end-value="39">0</div>
+						<div class="milestone_text">Countries</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Teachers -->
+
+	<div class="teachers">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="teachers_title text-center">Meet the Teachers</div>
+				</div>
+			</div>
+			<div class="row teachers_row">
+				
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{% static 'images/Ali.jpg'%}" alt="https://unsplash.com/@nickkarvounis"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Ali Jaffery</a></div>
+							<div class="teacher_subtitle">Unity3d And DataScientist</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{% static 'images/Adil.jpeg'%}" alt="https://unsplash.com/@rawpixel"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Adil Liaqat</a></div>
+							<div class="teacher_subtitle">UI & UX Design</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{%static 'images/Baqir.jpeg'%}" alt="https://unsplash.com/@taylor_grote"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Baqir Hussain</a></div>
+							<div class="teacher_subtitle">UML Diagrams</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{% static 'images/teacher_4.jpg'%}" alt="https://unsplash.com/@benjaminrobyn"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Christinne Smith</a></div>
+							<div class="teacher_subtitle">Marketing</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{% static 'images/teacher_5.jpg'%}" alt="https://unsplash.com/@christinhumephoto"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Michelle Williams</a></div>
+							<div class="teacher_subtitle">Art & Design</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Teacher -->
+				<div class="col-lg-4 col-md-6">
+					<div class="teacher">
+						<div class="teacher_image"><img src="{% static 'images/teacher_6.jpg'%}" alt="https://unsplash.com/@rawpixel"></div>
+						<div class="teacher_body text-center">
+							<div class="teacher_title"><a href="#">Jack Gallagan</a></div>
+							<div class="teacher_subtitle">Marketing</div>
+							<div class="teacher_social">
+								<ul>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<div class="button teachers_button"><a href="#">see all teachers<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<!--<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				
+				<div class="col-lg-3 footer_col">
+					<div class="footer_about">
+						<div class="logo_container">
+							<a href="#">
+								<div class="logo_content d-flex flex-row align-items-end justify-content-start">
+									<div class="logo_img"><img src="images/logo.png" alt=""></div>
+									<div class="logo_text">learn</div>
+								</div>
+							</a>
+						</div>
+						<div class="footer_about_text">
+							<p>Maecenas rutrum viverra sapien sed fermentum. Morbi tempor odio eget lacus tempus pulvinar.</p>
+						</div>
+						<div class="footer_social">
+							<ul>
+								<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col">
+					<div class="footer_links">
+						<div class="footer_title">Quick menu</div>
+						<ul class="footer_list">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="#">Facts</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col">
+					<div class="footer_links">
+						<div class="footer_title">Useful Links</div>
+						<ul class="footer_list">
+							<li><a href="courses.html">Courses</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="#">Teachers</a></li>
+							<li><a href="#">Links</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 footer_col">
+					<div class="footer_contact">
+						<div class="footer_title">Contact Us</div>
+						<div class="footer_contact_info">
+							<div class="footer_contact_item">
+								<div class="footer_contact_title">Address:</div>
+								<div class="footer_contact_line">1481 Creekside Lane Avila Beach, CA 93424</div>
+							</div>
+							<div class="footer_contact_item">
+								<div class="footer_contact_title">Phone:</div>
+								<div class="footer_contact_line">+53 345 7953 32453</div>
+							</div>
+							<div class="footer_contact_item">
+								<div class="footer_contact_title">Email:</div>
+								<div class="footer_contact_line">yourmail@gmail.com</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>-->
+</div>
+
+{% endblock content %}

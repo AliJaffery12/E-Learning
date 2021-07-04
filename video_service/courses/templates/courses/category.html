@@ -1,0 +1,71 @@
+{% extends 'courses/base2.html' %}
+
+<br>
+
+
+{% block content %}
+<br>
+    <div class="row">
+         
+            {% for tut, partone in part_ones.items %}
+               
+                <div class="col s12 m6 l4">
+                 
+              
+                 <a href="{{partone}}", style="color:#FFFFFF">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title" style="font-color:white;font-weight:bold;font-size:18px;">{{tut.name}}</div>
+                            <p style="font-size:70%">Published {{tut.tutorial_published}}</p>
+                            <p>{{tut.description}}</p>
+
+                        </div>
+                          </a>
+                        <form action="" method='GET'>
+                        <br>
+                <a href="#"    data-toggle="modal" data-target="#exampleModal"><button type="button" class="btn btn-secondary">Quiz</button></a>
+               </form> 
+                    </div>
+
+                
+            </div>
+            {% endfor %}
+            
+            
+
+
+        
+
+         
+    </div>
+   
+   <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <br>
+        <br>
+      <div class="modal-header">
+        
+        <h5 class="modal-title" id="exampleModalLabel" style="font-weight:bold;font-size:18px">Confirmation for Quiz</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <p style="font-weight:bold;font-size:20px;font-color:black;">Do you want to attempt Quiz of this Section?</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{% url 'quiz:index' %}" ><button type="button" class="btn btn-primary">yes</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

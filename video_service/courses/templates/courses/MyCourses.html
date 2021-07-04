@@ -1,0 +1,41 @@
+
+{% extends 'courses/base2.html' %}
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+
+{% block content %}
+{% load cart %}
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        {% for mycourse in myCourses %}
+            <div class="col-md-6">
+                <br>
+                <a href="{{mycourse.course_slug}}", style="color:#FFFFFF">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title" style="font-color:white;font-weight:bold;font-size:18px;"><a href="{% url 'courses:single_slug' mycourse.course_slug %}" style="color:#FFFFFF">{{mycourse.title}}</a></div>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <!--<p>{{cat.description}}</p>-->
+                            <p><a href='#'><img src="{{STATIC_URL}}{{mycourse.thumbnail.url}}"  width='350' height='200' /></a></p><br>
+                           
+                            
+                           
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        {% endfor %}
+
+<!-- End of ChatBot code -->
+    </div>
+    
+    
+{% endblock %}

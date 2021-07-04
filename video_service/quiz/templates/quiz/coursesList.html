@@ -1,0 +1,22 @@
+{% extends 'courses/base2.html' %}
+
+{% block title%}
+
+UserCertificate
+{% endblock title%}
+
+{% block content %}
+    <div class="container">
+    <br>
+    {% for c in course %}
+
+        {{c}}
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'quiz:student_certificate' c.pk %}"><button class="btn btn-primary">GetCertificate</button></a>
+        <br>
+        <hr>
+
+    {% endfor %}
+    </div>
+
+{% endblock content %}

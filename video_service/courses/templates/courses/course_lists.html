@@ -1,0 +1,114 @@
+{% extends 'courses/base2.html' %}
+
+{% load static %}
+<!--
+
+{% load static %}
+{% for object in object_list %}
+    <div class="container">
+    <tr>
+        <td><a href="{%url 'courses:course_detail' slug=object.slug %}">{{ object.title }}</a></td>
+        <p><a href='#'><img src="{{ object.thumbnail }}" width='300' height='200' /></a></p>
+        
+        
+        
+    </tr>
+    </div>
+{% endfor %}-->
+ <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+
+{% block content %}
+{% load cart %}
+<br>
+<div class="container" style="display:flex;justify-content:center;align-items:center;">
+<form method="get" action="search/" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Course Here" aria-label="Search" name="query" id="query" style="font-size:180%;">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+    <br>
+<div class="container">
+    <div class="row">
+        {% for cat in my_paginator %}
+            <div class="col-md-6 id={{cat.id}}">
+                <br>
+                <a href="{{cat.course_slug}}", style="color:#FFFFFF">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title" style="font-color:white;font-weight:bold;font-size:18px;">{{cat.title}}</div>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <!--<p>{{cat.description}}</p>-->
+                            <p><a href='#'><img src="{{STATIC_URL}}{{cat.thumbnail.url}}"  width='350' height='200' /></a></p><br>
+                            
+                            
+                           
+                            {% if user.is_teacher %}
+                            <a href="{% url 'courses:Addsubject' %}"><button class="btn btn primary m-2">AddSection</button></a>
+                            <a href="{% url 'courses:lesson' %}"><button class="btn btn primary m-2">AddLesson<button></a>
+                            {% else %}
+                            {% for mem in cat.allowed_memberships.all %}
+                                <span class="badge badge-success" style="text-color:#00ace6;font-color:#00ace6;font-weight:bold;">Membership Req: {{mem}}</span>
+                                <br/>
+                            {% endfor%}
+                            
+                            {% if cat|is_in_cart:request.session.cart %}
+                            <div class="p-0 no-gutters">
+                                <input type="submit" class="float-right-btn btn-block btn-light border form-control " value="Added">
+                                
+                                
+                            </div>
+                            {% else %}
+                            <form action="/courses/#{{cat.id}}" method="POST" class="btn-block">
+                                {% csrf_token %}
+                                <input hidden  type="text" name="mycourse" value='{{cat.id}}'>
+                                
+                            <input type="submit" class="float-right-btn btn-block btn-light btn-outline-info border form-control" value="AddToMYCourse">
+                            </form>
+                            {%endif%}
+                            {%endif%}
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        {% endfor %}
+
+<!-- End of ChatBot code -->
+    </div>
+    <br/><br/>
+    <!--{{my_paginator}}<br/>
+    Has_previous :{{my_paginator.has_previous}}<br/>
+    <br/>
+    Current_Page:{{my_paginator.number}}<br/>
+    Number_of_pages:{{my_paginator.paginator.num_pages}}<br/>
+    Has_Next: {{my_paginator.has_next}}<hr><br/><br/>-->
+    {% if my_paginator.has_previous %}
+    <a href="?page=1">&laquo First</a>
+    <a href="?page={{my_paginator.previous_page_number}}">Previous</a>
+    {% endif%}
+    page {{my_paginator.number}} of {{my_paginator.paginator.num_pages}}
+    {% if my_paginator.has_next %}
+    <a href="?page={{my_paginator.next_page_number}}">next</a>
+    <a href="?page={{my_paginator.paginator.num_pages}}">Last &raquo</a>
+    {% endif%}
+
+  
+
+{% endblock %}
+
+<!-- Create Project in django : django-admin  startproject projName
+    cd project
+    Create App within project : python manage.py startapp appname
+    Run project: python manage.py runserver
+    Insert table into database : python manage.py makemigrations appname 2) python manage.py migrate
+    
+
+
+
+
+
+ 
+
+
+-->

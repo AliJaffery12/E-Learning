@@ -1,0 +1,26 @@
+{% extends 'courses/base.html' %}
+
+                
+                <h1>Course Detail Page </h1>
+                  
+{% block content%}
+{% load static %}
+
+    <div class="container">
+    <tr>
+        <td><a href=''>{{object.title}}</a></td>
+        
+        <p>{{object.description}}</p>
+        
+        
+                            
+        
+    </tr>
+    <a href="{% url 'courses:AddSection' %}"><input type="submit" name="form2" value="Add Section" class="btn btn-warning btn-sm"></a>
+    </div>
+
+{% endblock %}
+               
+
+            
+        

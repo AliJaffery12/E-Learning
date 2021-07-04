@@ -1,0 +1,42 @@
+{% extends 'courses/base2.html' %}
+
+{% block content %}
+
+
+    <h1 style="color:white;font-style:bold;text-align:center;">Search Results</h1>
+    <div class="row" style="display:flex;justify-content:center;align-items:center;">
+        {% if allcourses|length < 1 %}
+        <p style="color:white;font-style:bold;">No results Found! for <b style="color:red;">{{query}}</b> <br/>
+        <!--Suggestion <hr><br/><br/>
+        <ul>
+        <li style="color:white;font-style:bold;">Make sure that all words are spelled correctly.</li>
+        <li><p style="color:white;font-style:bold;">Try different keywords.</p></li>
+        <li><p style="color:white;font-style:bold;">Try more general keywords</p></li>
+        <li><p style="color:white;font-style:bold;"> Try with different keywords</p></li>
+        </ul>-->
+
+        
+        {% endif %}
+        {% for cat in allcourses %}
+            <div class="col-md-3">
+            
+                <a href="{{cat.course_slug}}", style="color:#FFFFFF">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title" style="font-color:white;font-weight:bold;font-size:18px;"><a href="{% url 'courses:single_slug' cat.course_slug %}" style="color:#FFFFFF">{{cat.title}}</div><a/>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <p><a href='#'><img src="{{STATIC_URL}}{{cat.thumbnail.url}}"  width='200' height='200' /></a></p><br>
+                            <p style="color:#FFFFFF">{{cat.description}}</p>
+                           <!--- <a href="{% url 'courses:Addsubject' %}">AddSection</a>
+                            <a href="{% url 'courses:lesson' %}">AddLesson</a>-->
+                        </div>
+                    </div>
+                </a>
+               
+            </div>
+        {% endfor %}
+        </div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+
+  
+{% extends 'courses/base2.html' %}
+
+   
+
+{% load bootstrap3 %}
+{% load static %}
+
+<!-- Compiled and minified CSS -->
+   
+            
+
+{% block content  %}
+
+ <!--{% load static %}
+ <link rel="stylesheet" href="{% static 'css/login.css' %}" type = "text/css"/>
+ <link rel="stylesheet" type="text/css" href="{% static 'css/FontcolorAll.css' %}">-->
+
+
+<div class="container">
+
+    
+       
+    <div class="row">
+        
+        <form method="post">
+        {% csrf_token %}
+
+        <div class="container" >
+            <div id="textlogin">Login</div>
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <br>
+                    <span class="card-title"><img src="https://img.icons8.com/material/48/000000/lock-2--v1.png"/></span><br>
+                    <!--<div class="label">
+                    <label style="font-size:280%">Username:</label></br><p style="font-size:180%;">{{form.username }}</p>
+                    <label style="font-size:280%">Password:</label></br><p style="font-size:180%;">{{form.password}}</p>
+                    </div>-->
+                   {{form.as_p}}
+                    
+                </div>
+                <div class="card-action">
+                    <input type="submit" class="btn btn-default" value="Login">  
+                    
+                    
+                    
+                </div>
+                <br>
+                <a href="{% url 'accounts:reset_password'%}" style="color:white; font-weight:bold;">forget_password</a>
+            </div>
+        </div>
+        </form>
+        
+    </div>
+</div>
+   
+
+{% endblock  %}
